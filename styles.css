@@ -1,53 +1,134 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
+  box-sizing: border-box;
+
 }
 
-/* Header */
+html {
+  font-family: sans-serif;
+  background-color: #123;
+  color: #edc;
+  border: 1px solid;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
 header {
-  background-color: #ff6347; /* Tomato color for a warm, food-inspired theme */
-  color: white;
+  background-color: #edc;
   padding: 1em 0;
   text-align: center;
+  color: #123;
 }
 
-header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
 }
 
-header nav li {
-  display: inline;
-  margin: 0 1em;
+.navbar li {
+  position: relative;
 }
 
-header nav a {
-  color: white;
+.navbar a {
+  display: block;
   text-decoration: none;
-  font-weight: bold;
+  color: #123;
+  transition: background 300ms;
+  padding: 5px 10px;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
-/* Main Content */
+.navbar a:hover {
+  background-color: #cde;
+}
+
+#dropdown-content {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  background-color: #edc;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+
+}
+
+#dropdown-content li {
+  width: 100%;
+}
+
+#dropdown-content a {
+  text-align: left;
+  white-space: nowrap;
+  padding: 7px;
+}
+
+.dropdown:hover #dropdown-content {
+  display: flex;
+}
+
+
+/*
+.dropdown-btn:hover+.dropdown-content {
+  display: block;
+  position: absolute;
+  left: 50%;
+
+  */
+
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 800px;
+  background-color: #123;
   margin: 2em auto;
-  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 1em;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: #edc;
+  text-align: center;
 }
 
 section {
   margin-bottom: 2em;
 }
 
-/* Footer */
+section a {
+  text-decoration: none;
+  color: #edc;
+}
+
 footer {
   text-align: center;
   padding: 1em;
-  background-color: #ddd;
-  color: #333;
+  background-color: #edc;
+  color: #123;
+}
+
+.cv {
+  display: none;
+}
+
+main h1,
+main h2,
+main ul,
+main ol {
+  text-align: left;
+  float: left;
 }
